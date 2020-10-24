@@ -9,11 +9,3 @@ services:
       - ./src:/app
     ports:
       - 80:80
-    depends_on:
-      - db
-  db:
-    image: mysql:8.0
-    environment:
-      MYSQL_DATABASE: robot
-      MYSQL_USER: root
-      MYSQL_ALLOW_EMPTY_PASSWORD: 1
