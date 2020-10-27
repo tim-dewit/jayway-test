@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Commands\ControlRobotCommand;
+namespace App\Commands;
+
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -42,7 +43,7 @@ class ControlRobotCommandTest extends TestCase
      */
     public function testConstructThrowsExceptionOnInvalidInput(): void
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
 
         new ControlRobotCommand('foo');
     }

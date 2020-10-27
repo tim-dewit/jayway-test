@@ -135,7 +135,7 @@ class Robot implements EntityInterface, ControllableInterface
         $deltaIndex = $indexOfCurrentDirection + $direction;
         if ($deltaIndex > count(self::DIRECTIONS) - 1) {
             $deltaIndex = 0;
-        } else if ($deltaIndex < 0) {
+        } elseif ($deltaIndex < 0) {
             $deltaIndex = count(self::DIRECTIONS) - 1;
         }
 

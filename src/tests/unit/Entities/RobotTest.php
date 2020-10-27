@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Entities\ControllableInterface;
-use App\Entities\EntityInterface;
-use App\Entities\Robot;
+namespace App\Entities;
+
 use App\Rooms\RoomInterface;
 use PHPUnit\Framework\TestCase;
 
@@ -93,7 +92,7 @@ class RobotTest extends TestCase
      */
     public function testSetDirectionThrowsExceptionIfInvalidDirectionIsProvided(): void
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
         $this->expectExceptionMessage('Invalid direction: foo');
 
         $this->robot->setDirection('foo');

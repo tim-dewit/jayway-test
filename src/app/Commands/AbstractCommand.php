@@ -26,5 +26,5 @@ abstract class AbstractCommand
         return preg_match($this->validInputRegex, $this->command) === 1;
     }
 
-    protected abstract function parse(): void;
+    abstract protected function parse(): void;
 }

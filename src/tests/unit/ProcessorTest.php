@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
+namespace App;
+
 use App\Entities\ControllableInterface;
-use App\Processor;
 use PHPUnit\Framework\TestCase;
 
 /**

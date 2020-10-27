@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Commands\InitializeWorldCommand;
+namespace App\Commands;
+
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -32,7 +33,7 @@ class InitializeWorldCommandTest extends TestCase
      */
     public function testConstructThrowsExceptionOnInvalidInput(): void
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
 
         new InitializeWorldCommand('foo');
     }

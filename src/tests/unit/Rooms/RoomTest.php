@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Rooms\Room;
-use App\Rooms\RoomInterface;
+namespace App\Rooms;
+
 use PHPUnit\Framework\TestCase;
 
 /**

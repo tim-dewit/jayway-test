@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Commands\InitializeRobotCommand;
+namespace App\Commands;
+
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -47,7 +48,7 @@ class InitializeRobotCommandTest extends TestCase
      */
     public function testConstructThrowsExceptionOnInvalidInput(): void
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
 
         new InitializeRobotCommand('foo');
     }

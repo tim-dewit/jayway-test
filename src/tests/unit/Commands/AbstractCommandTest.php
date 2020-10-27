@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Commands\AbstractCommand;
+namespace App\Commands;
+
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -16,9 +17,9 @@ class AbstractCommandTest extends TestCase
      */
     public function testConstructThrowsExceptionIfInputIsInvalid(): void
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
 
-        new class('foo') extends AbstractCommand
+        new class ('foo') extends AbstractCommand
         {
             protected string $validInputRegex = '/\d/';
 
@@ -26,6 +27,5 @@ class AbstractCommandTest extends TestCase
             {
             }
         };
-
     }
 }
